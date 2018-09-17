@@ -1,0 +1,88 @@
+html{
+	background-color:#EEE9E9;
+}
+
+nav{
+	background-color: #FF0000;
+}
+
+.xfigure{
+	width: 215px;
+	height: 260px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.yfigure{
+	padding:0;
+	margin: 0;
+	border: 1px solid;
+	border-radius: 10px;
+	text-align: center;
+	background-color: black;
+}
+
+.figure-profile{
+	padding-top: 6px;
+	width: 155px;
+	height: 155px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: white;
+}
+.form-modal{
+	  background-image: url("img/logo.png");
+}
+
+.cinza{
+	background-color: #D3D3D3;
+}
+
+.branco{
+	background-color: white;
+}
+
+.sinopse{
+	height: 260px;
+}
+
+.texto-centro{
+	text-align: center;
+}
+.informacoes{
+	width: 215px;
+}
+
+.borda-r{
+	border: 1px solid;
+	border-radius: 10px;;
+	border-color: white;
+}
+
+.borda-r-b{
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+.lado-direito{
+	float: right;
+}
+
+.lado-esquerdo{
+	float: left;
+}
+
+.texto-centro{
+	text-align: center;
+}
+
+.msgOK{
+	background: #54FF9F;
+}
+
+.msgErro{
+	background: #FF7256;
+}
+
+
+
