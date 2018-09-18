@@ -29,7 +29,7 @@ public class HomeController {
 		Collections.shuffle(series);
 		model.addAttribute("serie", series.get(0));
 		*/
-		return " Change Jenkis e github";
+		return " C Jenkis e github";
 	}
 	
 	// Página Inicial
