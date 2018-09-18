@@ -29,7 +29,7 @@ public class HomeController {
 		Collections.shuffle(series);
 		model.addAttribute("serie", series.get(0));
 		*/
-		return "Funcionando com with jenkins";
+		return "eh nois mano";
 	}
 	
 	// Página Inicial
