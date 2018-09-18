@@ -29,7 +29,7 @@ public class HomeController {
 		Collections.shuffle(series);
 		model.addAttribute("serie", series.get(0));
 		*/
-		return "eh nois mano";
+		return "eh nois mano : NOVO BUILD";
 	}
 	
 	// Página Inicial
