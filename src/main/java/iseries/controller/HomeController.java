@@ -29,7 +29,7 @@ public class HomeController {
 		Collections.shuffle(series);
 		model.addAttribute("serie", series.get(0));
 		*/
-		return "TESTANDO SÁBADO: again";
+		return "TESTANDO : AGORA VAI";
 	}
 	
 	// Página Inicial
