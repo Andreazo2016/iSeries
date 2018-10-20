@@ -20,25 +20,14 @@ public class HomeController {
 	@Autowired
 	SerieRepository serieRepo;
 	
-	//Raiz
+
 	@RequestMapping("/")
 	@ResponseBody String  home(Model model){
-
-		/*
-		List<Serie> series = serieRepo.findAll();
-		Collections.shuffle(series);
-		model.addAttribute("serie", series.get(0));
-		*/
 		return "TESTANDO A VERA : AULA";
 	}
 	
-	// Página Inicial
 	@RequestMapping("homeUsuario")
 	String homeUsuario(HttpSession session){
-		
-		List<Serie> series = serieRepo.findAll();
-		session.setAttribute("lista_series", series);
-		
 		return "/user/HomePage";
 	}
 }

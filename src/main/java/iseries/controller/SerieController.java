@@ -16,10 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -43,14 +40,12 @@ public class SerieController {
 	@Autowired
 	TemporadaRepository tempRepo;
 	
-	@Autowired
-	ComentarioRepository comentRepo;
+	@Autowired private ComentarioRepository comentRepo;
 	
-	@Autowired
-	private ServletContext servletContext;
+	@Autowired private ServletContext servletContext;
 	
 	// Inserindo Serie
-	@RequestMapping(value = "cadastraSerie", method = RequestMethod.POST)
+	@PostMapping(value = "cadastraSerie")
 	String cadastraSerie(SerieDTO seriesDTO, @RequestParam(value="imagem", required=false) MultipartFile imagem,
 						 BindingResult result, Model model, RedirectAttributes redirectAttributes) throws IOException{
 
@@ -73,7 +68,7 @@ public class SerieController {
 	}
 	
 	// Atualizando Serie
-	@RequestMapping(value = "updateSerie", method = RequestMethod.POST)
+	@PostMapping(value = "updateSerie")
 	String updateSerie(SerieDTO seriesDTO, Model model, @RequestParam(value="imagem", required=false) MultipartFile imagem,
 			BindingResult result, RedirectAttributes redirectAttributes) throws IOException{
 		Serie serie = new Serie(seriesDTO);
@@ -102,7 +97,7 @@ public class SerieController {
 	}
 	
 	// Visualizando Serie
-	@RequestMapping(value = "viewSerie", method = RequestMethod.GET)
+	@GetMapping(value = "viewSerie")
 	String viewSerie(HttpSession session, SerieDTO serieDTO, Model model){
 		Serie serie = new Serie(serieDTO);
 		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
@@ -112,7 +107,7 @@ public class SerieController {
 	}
 	
 	//Usando p/ Quando add/del Temporada...
-	@RequestMapping(value = "viewSerieII", method = RequestMethod.GET)
+	@GetMapping(value = "viewSerieII")
 	String viewSerieII(HttpSession session, Model model, @RequestParam(value="id", required=false) Integer id){
 		
 		if(session.getAttribute("idx") != null){
@@ -161,7 +156,7 @@ public class SerieController {
 	}
 	
 	//Removendo Comentario
-	@RequestMapping(value = "deletarComentario", method = RequestMethod.GET)
+	@GetMapping(value = "deletarComentario")
 	String removerComentario(Comentario comentario, HttpSession session){
 		
 		comentario = this.comentRepo.findOne(comentario.getId());

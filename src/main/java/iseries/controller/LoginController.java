@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import iseries.model.UsuarioDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -16,18 +17,14 @@ import iseries.repository.UsuarioRepository;
 @Controller
 public class LoginController {
 
-	@Autowired
-	UsuarioRepository userRepo;
+	@Autowired UsuarioRepository userRepo;
 
-	@RequestMapping(value = "efeturarLogin", method = RequestMethod.POST)
+	@PostMapping(value = "efeturarLogin")
 	String logar(UsuarioDTO usuario, HttpSession session){
 		
 		List<Usuario> user = userRepo.findByLoginAndSenha(usuario.getLogin(), usuario.getSenha());
 		
-		if(user.size() != 0){
-			
-			session.setAttribute("usuario", user.get(0));
-			
+		if(!user.isEmpty()){
 			return "redirect:homeUsuario";
 		}
 		return "forward:/";

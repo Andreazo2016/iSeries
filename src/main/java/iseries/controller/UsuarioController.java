@@ -13,9 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -28,17 +26,14 @@ import iseries.util.FileUtil;
 @Controller
 public class UsuarioController {
 
-	@Autowired
-	private UsuarioRepository userRepo;
+	@Autowired private UsuarioRepository userRepo;
 
-	@Autowired
-	private SerieRepository serieRepo;
+	@Autowired private SerieRepository serieRepo;
 
-	@Autowired
-	private ServletContext servletContext;
+	@Autowired private ServletContext servletContext;
 
 	// Inserindo Usuario
-	@RequestMapping(value = "efetuarCadastro", method = RequestMethod.POST)
+	@PostMapping(value = "efetuarCadastro")
 	String addUsuario(UsuarioDTO usuario, BindingResult result, Model model,
 			RedirectAttributes redirectAttributes, @RequestParam(value="imagem", required=false) MultipartFile imagem) throws IOException{
 
@@ -64,7 +59,6 @@ public class UsuarioController {
 	String update(HttpSession session, UsuarioDTO usuario, RedirectAttributes redirectAttributes){
 
 		Usuario novo = this.userRepo.save(new Usuario(usuario));
-		session.setAttribute("usuario", this.userRepo.getOne(novo.getId()));
 		redirectAttributes.addFlashAttribute("msgOk", "Atualizado com Sucesso");
 		
 		return "forward:myProfile";
@@ -84,14 +78,11 @@ public class UsuarioController {
 		Usuario user = (Usuario) session.getAttribute("usuario");
 
 		user = this.userRepo.findOne(user.getId());
-
-		//model.addAttribute("usuario", user);
-
 		return "/user/minhas-series";
 	}
 
 	// Adicionando Serie Na Lista Pessoal
-	@RequestMapping(value = "addInMyList", method = RequestMethod.GET)
+	@GetMapping(value = "addInMyList")
 	String addMyList(@RequestParam(value="idUser", required=true) Integer id_user, 
 			@RequestParam(value="idSerie", required=true) Integer nova_serie,
 			HttpSession session){
@@ -120,7 +111,7 @@ public class UsuarioController {
 	}
 
 	// Removendo Serie da Lista Pessoal
-	@RequestMapping(value = "removeSerieMyList", method = RequestMethod.GET)
+	@GetMapping(value = "removeSerieMyList")
 	String removeSerieMyList(HttpSession session ,@RequestParam(value="ids", required=true) Integer ids){
 
 		Usuario user = (Usuario) session.getAttribute("usuario");
