@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import iseries.model.SerieDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -50,9 +51,10 @@ public class SerieController {
 	
 	// Inserindo Serie
 	@RequestMapping(value = "cadastraSerie", method = RequestMethod.POST)
-	String cadastraSerie(@Valid Serie serie, @RequestParam(value="imagem", required=false) MultipartFile imagem,
-			BindingResult result, Model model, RedirectAttributes redirectAttributes) throws IOException{
-		
+	String cadastraSerie(SerieDTO seriesDTO, @RequestParam(value="imagem", required=false) MultipartFile imagem,
+						 BindingResult result, Model model, RedirectAttributes redirectAttributes) throws IOException{
+
+		Serie serie = new Serie(seriesDTO);
 		if(result.hasErrors()){
 			redirectAttributes.addFlashAttribute("msgErro", "Erro ao Cadastrar Serie");
 			return "redirect:homeUsuario";
@@ -72,9 +74,9 @@ public class SerieController {
 	
 	// Atualizando Serie
 	@RequestMapping(value = "updateSerie", method = RequestMethod.POST)
-	String updateSerie(@Valid Serie serie, Model model, @RequestParam(value="imagem", required=false) MultipartFile imagem,
+	String updateSerie(SerieDTO seriesDTO, Model model, @RequestParam(value="imagem", required=false) MultipartFile imagem,
 			BindingResult result, RedirectAttributes redirectAttributes) throws IOException{
-		
+		Serie serie = new Serie(seriesDTO);
 		if(result.hasErrors()){
 			serie = serieRepo.findOne(serie.getId());
 			model.addAttribute("serie", serie);
@@ -101,8 +103,8 @@ public class SerieController {
 	
 	// Visualizando Serie
 	@RequestMapping(value = "viewSerie", method = RequestMethod.GET)
-	String viewSerie(HttpSession session, Serie serie, Model model){
-		
+	String viewSerie(HttpSession session, SerieDTO serieDTO, Model model){
+		Serie serie = new Serie(seriesDTO);
 		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		

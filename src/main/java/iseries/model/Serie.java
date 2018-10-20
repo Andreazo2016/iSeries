@@ -58,6 +58,7 @@ public class Serie {
 	private Collection<Comentario> comentarios;
 
 	public Serie() {}
+	public Serie(SerieDTO serieDTO) {}
 
 	public Serie(Integer id) {
 		super();

@@ -23,11 +23,11 @@ public class Temporada {
 	
 	@NotNull
 	@Size(min = 9, max = 12, message="O tamanho deve ser entre {min} e {max}")
-	private String numero;
+	private String numero = "default";
 	
 	@NotNull
 	@Size(min = 4, max = 15, message="O tamanho deve ser entre {min} e {max}")
-	private String duracao;
+	private String duracao  = "default";
 	
 	@ManyToOne
 	@JoinColumn(name="serie_id")

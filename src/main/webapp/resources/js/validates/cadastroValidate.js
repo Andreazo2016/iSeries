@@ -11,7 +11,6 @@ $(document).keyup(function(e) {
 
 $("#button-add-user").click(function() {
 	if($("#login1").val() === ""){
-		alert("login esta vazio")
 		return false;
 	}
 });

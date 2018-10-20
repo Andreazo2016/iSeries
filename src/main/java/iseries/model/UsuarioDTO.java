@@ -1,7 +1,7 @@
 package iseries.model;
 
 public class UsuarioDTO {
-    private String login;
+    private String login = "default";
     private String senha;
     private String email;
     private String path;
