@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-
-	@Autowired
-	SerieRepository serieRepo;
+	@Autowired SerieRepository serieRepo;
 	
 	//Raiz
 	@RequestMapping("/")

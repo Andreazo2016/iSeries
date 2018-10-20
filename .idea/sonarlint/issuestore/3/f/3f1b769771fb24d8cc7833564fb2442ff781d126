@@ -1,0 +1,3 @@
+
+^squid:S00107C"AConstructor has 9 parameters, which is greater than 7 authorized.(ÒÿÙðüÿÿÿÿ
+squid:S2637>"c"nome" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(ÜÔýˆûÿÿÿÿ

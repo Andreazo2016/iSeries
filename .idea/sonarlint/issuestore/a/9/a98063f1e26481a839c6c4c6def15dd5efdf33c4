@@ -1,0 +1,7 @@
+
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡חסכ
+qsquid:S1192 "UDefine a constant instead of duplicating this literal "redirect:viewSerieII" 3 times.(ג‡חתÿÿÿÿ
+asquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(·ֶע
+isquid:S00117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ²רפ
+isquid:S00117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ²רפ
+Wsquid:S4684"@Replace this persistent entity with a simple POJO or DTO object.(‡חסכ

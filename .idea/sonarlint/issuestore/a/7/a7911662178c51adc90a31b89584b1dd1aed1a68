@@ -1,0 +1,5 @@
+
+asquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Œ­åñ
+Tsquid:S2441"=Make "Usuario" serializable or don't store it in the session.(°™ø¸
+Wsquid:S4684"@Replace this persistent entity with a simple POJO or DTO object.(Å¶éø
+Zsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(†²Í±þÿÿÿÿ

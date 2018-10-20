@@ -1,0 +1,20 @@
+
+©%squid:RedundantThrowsDeclarationCheckƒ"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ÚØ©Õ
+dsquid:S4488q"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¬ìù¨ùÿÿÿÿ
+asquid:S4488J"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ûž®
+bsquid:S1192a"KDefine a constant instead of duplicating this literal "temporadas" 3 times.(¨üáÝ
+bsquid:S1192P"FDefine a constant instead of duplicating this literal "serie" 6 times.(ŒŠØ¢úÿÿÿÿ
+\squid:S46845"@Replace this persistent entity with a simple POJO or DTO object.(Š€Àïøÿÿÿÿ
+]squid:CallToDeprecatedMethod‡"/Remove this use of "getDate"; it is deprecated.(ùÎ“Òüÿÿÿÿ
+Xsquid:S4684£"@Replace this persistent entity with a simple POJO or DTO object.(—íß
+\squid:S4684h"@Replace this persistent entity with a simple POJO or DTO object.(‘„ðÝûÿÿÿÿ
+ž%squid:RedundantThrowsDeclarationCheckƒ"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ÚØ©Õ
+[squid:S1854š">Remove this useless assignment to local variable "comentario".(£…þˆýÿÿÿÿ
+_squid:S4488g"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¢­¬ø
+_squid:S4488¢"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÖÒ¿i
+]squid:CallToDeprecatedMethod‡"/Remove this use of "getYear"; it is deprecated.(ùÎ“Òüÿÿÿÿ
+asquid:S44884"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÈÃóÇ
+[squid:S1854">Remove this useless assignment to local variable "comentario".(£…þˆýÿÿÿÿ
+Wsquid:S4684K"@Replace this persistent entity with a simple POJO or DTO object.(Í”ö©
+nsquid:S1192R"WDefine a constant instead of duplicating this literal "/user/visualizar-serie" 4 times.(‹ø¦¨
+^squid:CallToDeprecatedMethod‡"0Remove this use of "getMonth"; it is deprecated.(ùÎ“Òüÿÿÿÿ

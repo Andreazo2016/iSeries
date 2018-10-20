@@ -99,8 +99,11 @@ public class UsuarioController {
 
 		Collection<Serie> series = new ArrayList<Serie>();
 
+		//findBug found
 		for(Serie s : user.getMinhas_series()){
-			if(s.getId() == nova_serie){
+			final Integer id = s.getId();
+			final Integer id_nova_series = nova_serie;
+			if(id_nova_series.equals(id)){
 				session.setAttribute("usuario", this.userRepo.getOne(id_user));
 				return "redirect:homeUsuario";
 			}

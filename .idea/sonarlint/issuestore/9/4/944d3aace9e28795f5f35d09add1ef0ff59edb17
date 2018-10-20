@@ -1,0 +1,12 @@
+
+_squid:S1192B"HDefine a constant instead of duplicating this literal "usuario" 6 times.(çÚË§
+Tsquid:S2441w"=Make "Usuario" serializable or don't store it in the session.(¡†ë¯
+nsquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ª¹¯üÿÿÿÿ
+_squid:S4488]"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„‰¤›
+\squid:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(ŒÕè¹ıÿÿÿÿ
+asquid:S4488("JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¾¦‰¸
+Tsquid:S2441B"=Make "Usuario" serializable or don't store it in the session.(çÚË§
+[squid:S2441k"=Make "Usuario" serializable or don't store it in the session.(¡†ë¯8úã‹ìç,
+\squid:S4684?"@Replace this persistent entity with a simple POJO or DTO object.(†ô­ùÿÿÿÿ
+isquid:S00117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷éû
+dsquid:S4488}"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(õªÈúÿÿÿÿ
