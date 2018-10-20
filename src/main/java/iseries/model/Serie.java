@@ -24,22 +24,22 @@ public class Serie {
 	private Integer id;
 	@NotNull
 	@Size(max = 50, message="O tamanho maximo é de {max}")
-	private String nome;
+	private String nome = "defualt";
 	@NotNull
 	@Size(min = 1, max = 15, message="O tamanho deve ser entre {min} e {max}")
-	private String diretor;
+	private String diretor = "defualt";
 	@NotNull
 	@Size(min =1, max = 15, message="O tamanho deve ser entre {min} e {max}")
-	private String origem;
+	private String origem = "defualt";
 	@NotNull
 	@Size(max = 10, message="O tamanho maximo é de {max}")
-	private String genero;
+	private String genero = "defualt";
 	@NotNull
 	@Size(min = 1, max = 500, message="O tamanho deve ser entre {min} e {max}")
-	private String sinopse;
+	private String sinopse = "defualt";
 	@NotNull
 	@Size(min = 4, max = 4, message="Deve ser apenas o ano exato... Ex: 2017")
-	private String ano;
+	private String ano = "defualt";
 	
 	@Column(name="PATH")
 	private String path;

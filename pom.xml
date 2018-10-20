@@ -52,7 +52,9 @@
 		</dependency>
 	</dependencies>
 
+
 	<build>
+		<!--
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -68,6 +70,8 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+
+
 
 		<plugins>
 			<plugin>
@@ -91,6 +95,9 @@
 				</executions>
 			</plugin>
 		</plugins>
+		-->
+
+
 	</build>
 
 	<groupId>iseries</groupId>

@@ -84,7 +84,7 @@ public class UsuarioController {
 
 		user = this.userRepo.findOne(user.getId());
 
-		model.addAttribute("usuario", user);
+		//model.addAttribute("usuario", user);
 
 		return "/user/minhas-series";
 	}

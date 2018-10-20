@@ -17,7 +17,7 @@ public class Episodio {
 	private Long id;
 	@NotNull
 	@Size(min = 9, max = 20, message="O tamanho deve ser entre {min} e {max}")
-	private String titulo;
+	private String titulo = "default";
 
 	@ManyToOne
 	@JoinColumn(name="temporada_id")

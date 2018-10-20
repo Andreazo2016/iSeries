@@ -5,14 +5,13 @@
 $(function(){
 	$("#comentar").click(function(){
 		if($("#texto").val() === ""){
-			alert("Insera algum texto no comentário!");
 		}else{
 			comentar($("#user").val(),$("#serie").val(),$("#texto").val());
 		}
 	});
 	
 	$("#deleteComentario").click(function(){
-		if(confirm("Tem certeza desta ação ?!")){
+		if(true){
 			return true;
 		}else{
 			return false;
