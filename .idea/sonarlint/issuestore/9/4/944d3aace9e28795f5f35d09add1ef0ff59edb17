@@ -1,0 +1,9 @@
+
+_squid:S1192B"HDefine a constant instead of duplicating this literal "usuario" 5 times.(ηΪΛ§
+nsquid:S00117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(΄ªΉ―όÿÿÿÿ
+dsquid:S4488z"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(υªΘϊÿÿÿÿ
+_squid:S4488]"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(„‰¤›
+isquid:S00117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(χιϋ
+asquid:S4488("JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ύ¦‰Έ
+isquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(©ƒ…8Λ ‘ι,
+Vsquid:S1854U"8Remove this useless assignment to local variable "user".(ΚϊΫχ8Λ ‘ι,

@@ -11,7 +11,8 @@ $(function(){
 	});
 	
 	$("#deleteComentario").click(function(){
-		if(true){
+		var i = 0;
+		if( i != 0){
 			return true;
 		}else{
 			return false;

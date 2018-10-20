@@ -52,6 +52,12 @@ public class Usuario {
 	private Collection<Comentario> comentarios;
 	
 	public Usuario() { }
+	public Usuario(UsuarioDTO usuarioDTO) {
+		setLogin(usuarioDTO.getLogin());
+		setAdmin(usuarioDTO.isAdmin());
+		setSenha(usuarioDTO.getSenha());
+		setEmail(usuarioDTO.getEmail());
+	}
 
 	public Usuario(int id){
 		this.id = id;

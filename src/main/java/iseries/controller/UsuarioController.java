@@ -8,6 +8,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import iseries.model.UsuarioDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +39,7 @@ public class UsuarioController {
 
 	// Inserindo Usuario
 	@RequestMapping(value = "efetuarCadastro", method = RequestMethod.POST)
-	String addUsuario(@Valid Usuario usuario, BindingResult result, Model model, 
+	String addUsuario(UsuarioDTO usuario, BindingResult result, Model model,
 			RedirectAttributes redirectAttributes, @RequestParam(value="imagem", required=false) MultipartFile imagem) throws IOException{
 
 		if(result.hasErrors()){
@@ -54,16 +55,16 @@ public class UsuarioController {
 		}
 
 		redirectAttributes.addFlashAttribute("msgOk", "Cadastro Realizado com Sucesso!");
-		userRepo.save(usuario);
+		userRepo.save(new Usuario(usuario));
 		return "redirect:/";
 	}
 
 	//Atualizar Usuario
 	@RequestMapping("updateUsuario")
-	String update(HttpSession session, Usuario usuario, RedirectAttributes redirectAttributes){
+	String update(HttpSession session, UsuarioDTO usuario, RedirectAttributes redirectAttributes){
 
-		this.userRepo.save(usuario);
-		session.setAttribute("usuario", this.userRepo.getOne(usuario.getId()));
+		Usuario novo = this.userRepo.save(new Usuario(usuario));
+		session.setAttribute("usuario", this.userRepo.getOne(novo.getId()));
 		redirectAttributes.addFlashAttribute("msgOk", "Atualizado com Sucesso");
 		
 		return "forward:myProfile";
