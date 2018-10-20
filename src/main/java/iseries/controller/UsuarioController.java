@@ -84,7 +84,7 @@ public class UsuarioController {
 			@RequestParam(value="idSerie", required=true) Integer nova_serie,
 			HttpSession session){
 
-		Usuario user = this.userRepo.findOne(id_user);
+		Usuario user = this.userRepo.findOne(idUser);
 
 		Collection<Serie> series = new ArrayList<Serie>();
 
