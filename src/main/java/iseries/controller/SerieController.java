@@ -104,7 +104,7 @@ public class SerieController {
 	// Visualizando Serie
 	@RequestMapping(value = "viewSerie", method = RequestMethod.GET)
 	String viewSerie(HttpSession session, SerieDTO serieDTO, Model model){
-		Serie serie = new Serie(seriesDTO);
+		Serie serie = new Serie(serieDTO);
 		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		
