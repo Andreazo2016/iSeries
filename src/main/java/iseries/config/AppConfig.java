@@ -12,7 +12,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
 	private MyInterceptor myInterceptor;
-	
+	@Override
 	public void addInterceptors(InterceptorRegistry registry){
 		registry.addInterceptor(myInterceptor);
 	}

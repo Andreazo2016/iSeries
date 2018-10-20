@@ -40,7 +40,7 @@ public class SerieController {
 	@Autowired private ComentarioRepository comentRepo;
 	
 	@Autowired private ServletContext servletContext;
-	private final String RETORN_URL = "/user/visualizar-serie";
+	private static final String RETORN_URL = "/user/visualizar-serie";
 	// Inserindo Serie
 	@PostMapping(value = "cadastraSerie")
 	String cadastraSerie(SerieDTO seriesDTO, @RequestParam(value="imagem", required=false) MultipartFile imagem,
@@ -71,7 +71,7 @@ public class SerieController {
 		Serie serie = new Serie(seriesDTO);
 		if(result.hasErrors()){
 			serie = serieRepo.findOne(serie.getId());
-			model.addAttribute("serie", serie);
+			model.addAttribute("Updateserie", serie);
 			redirectAttributes.addFlashAttribute("msgErro", "Erro ao Atualizar Serie");
 			return RETORN_URL;
 		}
@@ -87,8 +87,8 @@ public class SerieController {
 		
 		serieRepo.save(serie);
 		
-		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
-		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
+		model.addAttribute("Serie", this.serieRepo.getOne(serie.getId()));
+		model.addAttribute("temporada", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		
 		return RETORN_URL;
 	}
@@ -97,7 +97,7 @@ public class SerieController {
 	@GetMapping(value = "viewSerie")
 	String viewSerie(HttpSession session, SerieDTO serieDTO, Model model){
 		Serie serie = new Serie(serieDTO);
-		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
+		model.addAttribute("serieOne", this.serieRepo.getOne(serie.getId()));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		
 		return RETORN_URL;
@@ -112,7 +112,7 @@ public class SerieController {
 			session.setAttribute("idx", null);
 		}
 		
-		model.addAttribute("serie", this.serieRepo.getOne(id));
+		model.addAttribute("ViewSerie", this.serieRepo.getOne(id));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(id) );
 		
 		return RETORN_URL;
@@ -122,7 +122,7 @@ public class SerieController {
 	@SuppressWarnings("deprecation")
 	@RequestMapping("/adicionarComentario")
 	@ResponseBody
-	public String adicionarComentario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+	public String adicionarComentario(HttpServletRequest request, HttpServletResponse response){
 		
 		Date date = new Date();
 		Calendar calendar = Calendar.getInstance();
@@ -140,12 +140,11 @@ public class SerieController {
 		comentario.setData(calendar);
 		
 		if(this.comentRepo.save(comentario) != null){
-			String coment = "{"+
+		return "{"+
 					"\"autor\":\""+comentario.getUsuario().getLogin()+"\","+
 					"\"noticia\":\""+comentario.getId_serie()+"\","+
 					"\"texto\":\""+comentario.getTexto()+"\","+
 					"\"data\":"+date.getTime()+"}";
-			return coment;
 		}
 		return "";
 	}
