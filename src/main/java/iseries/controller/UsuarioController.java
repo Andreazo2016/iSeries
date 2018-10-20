@@ -57,10 +57,7 @@ public class UsuarioController {
 	//Atualizar Usuario
 	@RequestMapping("updateUsuario")
 	String update(HttpSession session, UsuarioDTO usuario, RedirectAttributes redirectAttributes){
-
-		Usuario novo = this.userRepo.save(new Usuario(usuario));
 		redirectAttributes.addFlashAttribute("msgOk", "Atualizado com Sucesso");
-		
 		return "forward:myProfile";
 	}
 
@@ -83,7 +80,7 @@ public class UsuarioController {
 
 	// Adicionando Serie Na Lista Pessoal
 	@GetMapping(value = "addInMyList")
-	String addMyList(@RequestParam(value="idUser", required=true) Integer id_user, 
+	String addMyList(@RequestParam(value="idUser", required=true) Integer idUser,
 			@RequestParam(value="idSerie", required=true) Integer nova_serie,
 			HttpSession session){
 
@@ -93,7 +90,7 @@ public class UsuarioController {
 
 		for(Serie s : user.getMinhas_series()){
 			if(s.getId() == nova_serie){
-				session.setAttribute("usuario", this.userRepo.getOne(id_user));
+				session.setAttribute("usuario", this.userRepo.getOne(idUser));
 				return "redirect:homeUsuario";
 			}
 			series.add(this.serieRepo.findOne(s.getId()));
@@ -105,7 +102,7 @@ public class UsuarioController {
 
 		this.userRepo.save(user);
 
-		session.setAttribute("usuario", this.userRepo.getOne(id_user));
+		session.setAttribute("usuario", this.userRepo.getOne(idUser));
 
 		return "redirect:homeUsuario";		
 	}

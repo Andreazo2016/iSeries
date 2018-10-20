@@ -31,19 +31,16 @@ import iseries.util.FileUtil;
 @Controller
 public class SerieController {
 
-	@Autowired
-	UsuarioRepository userRepo;
+	@Autowired private UsuarioRepository userRepo;
 	
-	@Autowired
-	SerieRepository serieRepo;
+	@Autowired private SerieRepository serieRepo;
 	
-	@Autowired
-	TemporadaRepository tempRepo;
+	@Autowired private TemporadaRepository tempRepo;
 	
 	@Autowired private ComentarioRepository comentRepo;
 	
 	@Autowired private ServletContext servletContext;
-	
+	private final String RETORN_URL = "/user/visualizar-serie";
 	// Inserindo Serie
 	@PostMapping(value = "cadastraSerie")
 	String cadastraSerie(SerieDTO seriesDTO, @RequestParam(value="imagem", required=false) MultipartFile imagem,
@@ -76,7 +73,7 @@ public class SerieController {
 			serie = serieRepo.findOne(serie.getId());
 			model.addAttribute("serie", serie);
 			redirectAttributes.addFlashAttribute("msgErro", "Erro ao Atualizar Serie");
-			return "/user/visualizar-serie";
+			return RETORN_URL;
 		}
 		
 		if(imagem.getBytes().length != 0){
@@ -93,7 +90,7 @@ public class SerieController {
 		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		
-		return "/user/visualizar-serie";
+		return RETORN_URL;
 	}
 	
 	// Visualizando Serie
@@ -103,7 +100,7 @@ public class SerieController {
 		model.addAttribute("serie", this.serieRepo.getOne(serie.getId()));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(serie.getId()) );
 		
-		return "/user/visualizar-serie";
+		return RETORN_URL;
 	}
 	
 	//Usando p/ Quando add/del Temporada...
@@ -118,7 +115,7 @@ public class SerieController {
 		model.addAttribute("serie", this.serieRepo.getOne(id));
 		model.addAttribute("temporadas", this.tempRepo.findTemporadaOfSerie(id) );
 		
-		return "/user/visualizar-serie";
+		return RETORN_URL;
 	}
 
 	//Adicionando Comentario
@@ -148,23 +145,17 @@ public class SerieController {
 					"\"noticia\":\""+comentario.getId_serie()+"\","+
 					"\"texto\":\""+comentario.getTexto()+"\","+
 					"\"data\":"+date.getTime()+"}";
-			comentario = null;
 			return coment;
 		}
-		comentario = null;
 		return "";
 	}
 	
 	//Removendo Comentario
 	@GetMapping(value = "deletarComentario")
 	String removerComentario(Comentario comentario, HttpSession session){
-		
 		comentario = this.comentRepo.findOne(comentario.getId());
-		
 		this.comentRepo.delete(comentario);
-		
 		session.setAttribute("idx", comentario.getId_serie());
-		
 		return "redirect:viewSerieII";
 	}
 
