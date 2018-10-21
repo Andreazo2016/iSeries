@@ -1,0 +1,8 @@
+
+jsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µåÙ§
+zsquid:S2637>"d"login" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(‚ë¾=
+ksquid:S00100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦âìûÿÿÿÿ
+‚squid:S26377"d"login" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(‹º¨•8ßß×—é,
+gsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µåÙ§
+isquid:S00117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©“­ğ
+usquid:S001160"XRename this field "minhas_series" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‹”Øúÿÿÿÿ
