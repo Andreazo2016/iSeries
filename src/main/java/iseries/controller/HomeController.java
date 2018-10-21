@@ -18,7 +18,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	@ResponseBody String  home(Model model){
-		return "Denvo TESTANDO";
+		return "TESTANDO O NOVO FORMATO";
 	}
 	
 	@RequestMapping("homeUsuario")
