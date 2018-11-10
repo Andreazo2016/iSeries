@@ -16,7 +16,6 @@ public class Episodio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotNull
-	@Size(min = 9, max = 20, message="O tamanho deve ser entre {min} e {max}")
 	private String titulo = "default";
 
 	@ManyToOne

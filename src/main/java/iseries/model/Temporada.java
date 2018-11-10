@@ -22,11 +22,9 @@ public class Temporada {
 	private Integer id;
 	
 	@NotNull
-	@Size(min = 9, max = 12, message="O tamanho deve ser entre {min} e {max}")
 	private String numero = "default";
 	
 	@NotNull
-	@Size(min = 4, max = 15, message="O tamanho deve ser entre {min} e {max}")
 	private String duracao  = "default";
 	
 	@ManyToOne

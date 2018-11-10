@@ -1,5 +1,6 @@
 package iseries.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class Serie {
 	@OneToMany
 	(mappedBy = "serie", targetEntity = Temporada.class, fetch = FetchType.LAZY, 
 	cascade = CascadeType.ALL)
-	private List<Temporada> temporadas;
+	private List<Temporada> temporadas = new ArrayList<Temporada>();
 
 	@OneToMany
 	(mappedBy="serie", targetEntity=Comentario.class,	fetch=FetchType.LAZY,

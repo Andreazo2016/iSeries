@@ -2,6 +2,7 @@ iseries/interceptor/MyInterceptor.class
 iseries/controller/AdministradorController.class
 iseries/repository/SerieRepository.class
 iseries/App.class
+iseries/model/UsuarioDTO.class
 iseries/controller/UsuarioController.class
 iseries/repository/ComentarioRepository.class
 iseries/config/AppConfig.class
@@ -19,3 +20,4 @@ iseries/model/Comentario.class
 iseries/repository/UsuarioRepository.class
 iseries/controller/TemporadaController.class
 iseries/controller/HomeController.class
+iseries/model/SerieDTO.class

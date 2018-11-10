@@ -10,6 +10,6 @@ import iseries.model.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
-	public List<Usuario> findByLoginAndSenha(String login, String senha);
+	 Usuario findByLoginAndSenha(String login, String senha);
 	
 }

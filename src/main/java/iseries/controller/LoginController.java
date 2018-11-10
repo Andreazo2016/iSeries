@@ -22,9 +22,9 @@ public class LoginController {
 	@PostMapping(value = "efeturarLogin")
 	String logar(UsuarioDTO usuario, HttpSession session){
 		
-		List<Usuario> user = userRepo.findByLoginAndSenha(usuario.getLogin(), usuario.getSenha());
+		Usuario user = userRepo.findByLoginAndSenha(usuario.getLogin(), usuario.getSenha());
 		
-		if(!user.isEmpty()){
+		if(user != null){
 			return "redirect:homeUsuario";
 		}
 		return "forward:/";
