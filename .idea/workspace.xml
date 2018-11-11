@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b819e6f-86b8-4145-9c6a-a69688d45233" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/SerieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/model/Episodio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/model/Episodio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/model/Serie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/model/Serie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/model/Temporada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/model/Temporada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/iseries/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/iseries/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/SerieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/SerieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/TemporadaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/TemporadaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/controller/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Episodio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Episodio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Serie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Serie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Temporada.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Temporada.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/model/Usuario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/WEB-INF/classes/iseries/repository/UsuarioRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/resources/js/controllers/comentarioController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/resources/js/controllers/comentarioController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/resources/js/validates/cadastroValidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/iSeries-0.0.1-SNAPSHOT/resources/js/validates/cadastroValidate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="1b819e6f-86b8-4145-9c6a-a69688d45233" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -159,6 +125,7 @@
     <session id="761327024">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -646,7 +613,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541879133756" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541879471386" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -736,8 +703,7 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="JUnit.LoginTestTest" />
-      <item itemvalue="JUnit.LoginTestTest (2)" />
+      <item itemvalue="JUnit.LoginTest" />
       <item itemvalue="JUnit.SerieTest" />
       <item itemvalue="JUnit.LoginTest.testarLogin" />
       <item itemvalue="JUnit.LoginTest.testarSalvarUsuario" />
@@ -746,9 +712,7 @@
       <list>
         <item itemvalue="JUnit.SerieTest" />
         <item itemvalue="JUnit.LoginTest.testarSalvarUsuario" />
-        <item itemvalue="JUnit.LoginTestTest" />
         <item itemvalue="JUnit.LoginTest.testarLogin" />
-        <item itemvalue="JUnit.LoginTestTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -815,7 +779,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30438247" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -828,7 +791,7 @@
       <window_info anchor="bottom" id="Database Console" weight="0.32919255" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49641433" visible="true" weight="0.29658386" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49641433" weight="0.29658386" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29192546" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

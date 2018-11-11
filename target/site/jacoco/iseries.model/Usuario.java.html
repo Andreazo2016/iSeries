@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Usuario.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">iSeries</a> &gt; <a href="index.source.html" class="el_package">iseries.model</a> &gt; <span class="el_source">Usuario.java</span></div><h1>Usuario.java</h1><pre class="source lang-java linenums">package iseries.model;
+
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity(name=&quot;usuarios&quot;)
+public class Usuario {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name=&quot;ID_USUARIO&quot;, nullable=false)
+	private Integer id;
+	
+	@NotNull 
+	@Size(max = 25, message=&quot;O tamanho deve ser entre {min} e {max}&quot;)
+	private String login;
+	
+	@NotNull 
+	private String email;
+	
+	@NotNull 
+	@Size(max = 10, message=&quot;O tamanho deve ser entre {min} e {max}&quot;)
+	private String senha;
+	
+	@NotNull 
+	private boolean admin;
+	
+	@Column(name=&quot;PATH&quot;)
+	private String path;
+
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = &quot;USUARIO_SERIE&quot;, 
+	joinColumns = { @JoinColumn(name = &quot;ID_USUARIO&quot;, referencedColumnName=&quot;ID_USUARIO&quot;)}, 
+	inverseJoinColumns = { @JoinColumn(name = &quot;ID_SERIE&quot;,  referencedColumnName=&quot;ID_SERIE&quot;) })
+	private Collection&lt;Serie&gt; minhas_series;
+
+	@OneToMany
+	(mappedBy=&quot;usuario&quot;, targetEntity=Comentario.class, fetch=FetchType.LAZY,cascade=CascadeType.ALL)
+	private Collection&lt;Comentario&gt; comentarios;
+	
+<span class="nc" id="L54">	public Usuario() { }</span>
+
+<span class="nc" id="L56">	public Usuario(UsuarioDTO usuarioDTO) {</span>
+<span class="nc" id="L57">		setLogin(usuarioDTO.getLogin());</span>
+<span class="nc" id="L58">		setAdmin(usuarioDTO.isAdmin());</span>
+<span class="nc" id="L59">		setSenha(usuarioDTO.getSenha());</span>
+<span class="nc" id="L60">		setEmail(usuarioDTO.getEmail());</span>
+<span class="nc" id="L61">	}</span>
+
+<span class="nc" id="L63">	public Usuario(int id){</span>
+<span class="nc" id="L64">		this.id = id;</span>
+<span class="nc" id="L65">	}</span>
+
+<span class="nc" id="L67">	public Usuario(Integer id, String login, String email, String senha, boolean admin) {</span>
+<span class="nc" id="L68">		this.id = id;</span>
+<span class="nc" id="L69">		this.login = login;</span>
+<span class="nc" id="L70">		this.email = email;</span>
+<span class="nc" id="L71">		this.senha = senha;</span>
+<span class="nc" id="L72">		this.admin = admin;</span>
+<span class="nc" id="L73">	}</span>
+
+	public Usuario(Integer id, String login, String email, String senha, boolean admin,
+			Collection&lt;Serie&gt; minhas_series) {
+<span class="nc" id="L77">		super();</span>
+<span class="nc" id="L78">		this.id = id;</span>
+<span class="nc" id="L79">		this.login = login;</span>
+<span class="nc" id="L80">		this.email = email;</span>
+<span class="nc" id="L81">		this.senha = senha;</span>
+<span class="nc" id="L82">		this.admin = admin;</span>
+<span class="nc" id="L83">		this.minhas_series = minhas_series;</span>
+<span class="nc" id="L84">	}</span>
+
+	public Integer getId() {
+<span class="nc" id="L87">		return id;</span>
+	}
+
+	public void setId(Integer id) {
+<span class="nc" id="L91">		this.id = id;</span>
+<span class="nc" id="L92">	}</span>
+
+	public String getLogin() {
+<span class="nc" id="L95">		return login;</span>
+	}
+
+	public void setLogin(String login) {
+<span class="nc" id="L99">		this.login = login;</span>
+<span class="nc" id="L100">	}</span>
+
+	public String getEmail() {
+<span class="nc" id="L103">		return email;</span>
+	}
+
+	public void setEmail(String email) {
+<span class="nc" id="L107">		this.email = email;</span>
+<span class="nc" id="L108">	}</span>
+
+	public String getSenha() {
+<span class="nc" id="L111">		return senha;</span>
+	}
+
+	public void setSenha(String senha) {
+<span class="nc" id="L115">		this.senha = senha;</span>
+<span class="nc" id="L116">	}</span>
+
+	public boolean isAdmin() {
+<span class="nc" id="L119">		return admin;</span>
+	}
+
+	public void setAdmin(boolean admin) {
+<span class="nc" id="L123">		this.admin = admin;</span>
+<span class="nc" id="L124">	}</span>
+
+	public Collection&lt;Serie&gt; getMinhas_series() {
+<span class="nc" id="L127">		return minhas_series;</span>
+	}
+
+	public void setMinhas_series(Collection&lt;Serie&gt; minhas_series) {
+<span class="nc" id="L131">		this.minhas_series = minhas_series;</span>
+<span class="nc" id="L132">	}</span>
+
+	public String getPath() {
+<span class="nc" id="L135">		return path;</span>
+	}
+
+	public void setPath(String path) {
+<span class="nc" id="L139">		this.path = path;</span>
+<span class="nc" id="L140">	}</span>
+
+	public Collection&lt;Comentario&gt; getComentarios() {
+<span class="nc" id="L143">		return comentarios;</span>
+	}
+
+	public void setComentarios(Collection&lt;Comentario&gt; comentarios) {
+<span class="nc" id="L147">		this.comentarios = comentarios;</span>
+<span class="nc" id="L148">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

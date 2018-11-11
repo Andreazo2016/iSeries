@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Comentario.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">iSeries</a> &gt; <a href="index.source.html" class="el_package">iseries.model</a> &gt; <span class="el_source">Comentario.java</span></div><h1>Comentario.java</h1><pre class="source lang-java linenums">package iseries.model;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity(name=&quot;COMENTARIO&quot;)
+public class Comentario {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name=&quot;ID_COMENTARIO&quot;)
+	private Integer id;
+
+	@Column(name=&quot;ID_USUARIO&quot;, nullable=false, insertable=false, updatable=false)
+	private Integer id_usuario;
+
+	@Column(name=&quot;ID_SERIE&quot;, nullable=false, insertable=false, updatable=false)
+	private Integer id_serie;
+
+	@Column(name=&quot;TEXTO&quot;, nullable=false)
+	private String texto;
+
+	@Column(name=&quot;DATA&quot;,nullable=false)
+	private Calendar data;
+
+	@ManyToOne(optional=false)
+	@JoinColumn(name=&quot;ID_USUARIO&quot;, referencedColumnName=&quot;ID_USUARIO&quot;)
+	private Usuario usuario;
+
+	@ManyToOne(optional=false)
+	@JoinColumn(name=&quot;ID_SERIE&quot;, referencedColumnName=&quot;ID_SERIE&quot;)
+	private Serie serie;
+
+<span class="nc" id="L41">	public Comentario() {}</span>
+
+<span class="nc" id="L43">	public Comentario(String texto) {</span>
+<span class="nc" id="L44">		this.texto = texto;</span>
+<span class="nc" id="L45">	}</span>
+
+	public Comentario(Integer id, Integer id_usuario, Integer id_serie, String texto, Calendar data, Usuario usuario,
+			Serie serie) {
+<span class="nc" id="L49">		super();</span>
+<span class="nc" id="L50">		this.id = id;</span>
+<span class="nc" id="L51">		this.id_usuario = id_usuario;</span>
+<span class="nc" id="L52">		this.id_serie = id_serie;</span>
+<span class="nc" id="L53">		this.texto = texto;</span>
+<span class="nc" id="L54">		this.data = data;</span>
+<span class="nc" id="L55">		this.usuario = usuario;</span>
+<span class="nc" id="L56">		this.serie = serie;</span>
+<span class="nc" id="L57">	}</span>
+
+	public Integer getId() {
+<span class="nc" id="L60">		return id;</span>
+	}
+
+	public void setId(Integer id) {
+<span class="nc" id="L64">		this.id = id;</span>
+<span class="nc" id="L65">	}</span>
+
+	public Integer getId_usuario() {
+<span class="nc" id="L68">		return id_usuario;</span>
+	}
+
+	public void setId_usuario(Integer id_usuario) {
+<span class="nc" id="L72">		this.id_usuario = id_usuario;</span>
+<span class="nc" id="L73">	}</span>
+
+	public Integer getId_serie() {
+<span class="nc" id="L76">		return id_serie;</span>
+	}
+
+	public void setId_serie(Integer id_serie) {
+<span class="nc" id="L80">		this.id_serie = id_serie;</span>
+<span class="nc" id="L81">	}</span>
+
+	public String getTexto() {
+<span class="nc" id="L84">		return texto;</span>
+	}
+
+	public void setTexto(String texto) {
+<span class="nc" id="L88">		this.texto = texto;</span>
+<span class="nc" id="L89">	}</span>
+
+	public Calendar getData() {
+<span class="nc" id="L92">		return data;</span>
+	}
+
+	public void setData(Calendar data) {
+<span class="nc" id="L96">		this.data = data;</span>
+<span class="nc" id="L97">	}</span>
+
+	public Usuario getUsuario() {
+<span class="nc" id="L100">		return usuario;</span>
+	}
+
+	public void setUsuario(Usuario usuario) {
+<span class="nc" id="L104">		this.usuario = usuario;</span>
+<span class="nc" id="L105">	}</span>
+
+	public Serie getSerie() {
+<span class="nc" id="L108">		return serie;</span>
+	}
+
+	public void setSerie(Serie serie) {
+<span class="nc" id="L112">		this.serie = serie;</span>
+<span class="nc" id="L113">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

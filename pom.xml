@@ -9,6 +9,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
 	</parent>
+
 	<dependencies>
 	
 		<dependency>
@@ -71,6 +72,30 @@
 
 
 	<build>
+
+	<plugins>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.7.7.201606060606</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>prepare-agent</goal>
+            <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+	<plugin>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.12.1</version>
+  <configuration>
+    <argLine>-server -ea -XX:MaxPermSize=256m -Xmx4g -XX:-UseSplitVerifier ${argLine}</argLine>
+  </configuration>
+</plugin>
+  </plugins>
+	
 		<!--
 		<pluginManagement>
 			<plugins>

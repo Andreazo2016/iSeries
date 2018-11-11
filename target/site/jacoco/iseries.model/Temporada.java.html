@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Temporada.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">iSeries</a> &gt; <a href="index.source.html" class="el_package">iseries.model</a> &gt; <span class="el_source">Temporada.java</span></div><h1>Temporada.java</h1><pre class="source lang-java linenums">package iseries.model;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity(name=&quot;temporadas&quot;)
+public class Temporada {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+<span class="nc" id="L24">	@NotNull</span>
+	private String numero = &quot;default&quot;;
+	
+<span class="nc" id="L27">	@NotNull</span>
+	private String duracao  = &quot;default&quot;;
+	
+	@ManyToOne
+	@JoinColumn(name=&quot;serie_id&quot;)
+	private Serie serie;
+	
+	@OneToMany
+	(mappedBy = &quot;temporada&quot;, targetEntity = Episodio.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List&lt;Episodio&gt; episodios;
+	
+<span class="nc" id="L38">	public Temporada() {}</span>
+
+	public Temporada(Integer id) {
+<span class="nc" id="L41">		super();</span>
+<span class="nc" id="L42">		this.id = id;</span>
+<span class="nc" id="L43">	}</span>
+
+	public Temporada(Integer id, String numero, String duracao, Serie serie, List&lt;Episodio&gt; episodios) {
+<span class="nc" id="L46">		super();</span>
+<span class="nc" id="L47">		this.id = id;</span>
+<span class="nc" id="L48">		this.numero = numero;</span>
+<span class="nc" id="L49">		this.duracao = duracao;</span>
+<span class="nc" id="L50">		this.serie = serie;</span>
+<span class="nc" id="L51">		this.episodios = episodios;</span>
+<span class="nc" id="L52">	}</span>
+
+	public Integer getId() {
+<span class="nc" id="L55">		return id;</span>
+	}
+
+	public void setId(Integer id) {
+<span class="nc" id="L59">		this.id = id;</span>
+<span class="nc" id="L60">	}</span>
+
+	public String getNumero() {
+<span class="nc" id="L63">		return numero;</span>
+	}
+
+	public void setNumero(String numero) {
+<span class="nc" id="L67">		this.numero = numero;</span>
+<span class="nc" id="L68">	}</span>
+
+	public String getDuracao() {
+<span class="nc" id="L71">		return duracao;</span>
+	}
+
+	public void setDuracao(String duracao) {
+<span class="nc" id="L75">		this.duracao = duracao;</span>
+<span class="nc" id="L76">	}</span>
+
+	public Serie getSerie() {
+<span class="nc" id="L79">		return serie;</span>
+	}
+
+	public void setSerie(Serie serie) {
+<span class="nc" id="L83">		this.serie = serie;</span>
+<span class="nc" id="L84">	}</span>
+
+	public List&lt;Episodio&gt; getEpisodios() {
+<span class="nc" id="L87">		return episodios;</span>
+	}
+
+	public void setEpisodios(List&lt;Episodio&gt; episodios) {
+<span class="nc" id="L91">		this.episodios = episodios;</span>
+<span class="nc" id="L92">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Episodio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">iSeries</a> &gt; <a href="index.source.html" class="el_package">iseries.model</a> &gt; <span class="el_source">Episodio.java</span></div><h1>Episodio.java</h1><pre class="source lang-java linenums">package iseries.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity(name=&quot;episodios&quot;)
+public class Episodio {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+<span class="nc" id="L18">	@NotNull</span>
+	private String titulo = &quot;default&quot;;
+
+	@ManyToOne
+	@JoinColumn(name=&quot;temporada_id&quot;)
+	private Temporada temporada; 
+	
+<span class="nc" id="L25">	public Episodio() {	}</span>
+
+<span class="nc" id="L27">	public Episodio(Long id) {</span>
+<span class="nc" id="L28">		this.id = id;</span>
+<span class="nc" id="L29">	}</span>
+
+<span class="nc" id="L31">	public Episodio(Long id, String titulo) {</span>
+<span class="nc" id="L32">		this.id = id;</span>
+<span class="nc" id="L33">		this.titulo = titulo;</span>
+<span class="nc" id="L34">	}</span>
+
+	public Long getId() {
+<span class="nc" id="L37">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L41">		this.id = id;</span>
+<span class="nc" id="L42">	}</span>
+
+
+	public String getTitulo() {
+<span class="nc" id="L46">		return titulo;</span>
+	}
+
+	public void setTitulo(String titulo) {
+<span class="nc" id="L50">		this.titulo = titulo;</span>
+<span class="nc" id="L51">	}</span>
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
