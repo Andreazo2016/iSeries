@@ -36,7 +36,6 @@ public class LoginTest {
     @Test
    public  void testarSalvarUsuario(){
         Usuario usuarioSavo = usuarioRepository.save(usuario);
-        int i = 0;
         Assert.assertEquals(usuarioSavo.getEmail(),"andreazo2012@gmail.com");
         Assert.assertEquals(usuarioSavo.getLogin(),"devman");
         Assert.assertEquals(usuario.getSenha(),"solon123");

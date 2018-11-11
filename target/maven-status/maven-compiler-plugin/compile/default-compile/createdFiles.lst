@@ -6,7 +6,6 @@ iseries/model/UsuarioDTO.class
 iseries/controller/UsuarioController.class
 iseries/repository/ComentarioRepository.class
 iseries/config/AppConfig.class
-iseries/controller/SerieController.class
 iseries/model/Temporada.class
 iseries/controller/LoginController.class
 iseries/model/Serie.class
@@ -16,6 +15,7 @@ iseries/repository/TemporadaRepository.class
 iseries/model/Usuario.class
 iseries/controller/ExceptionHandlerController.class
 iseries/repository/EpisodioRepository.class
+iseries/controller/SeriesController.class
 iseries/model/Comentario.class
 iseries/repository/UsuarioRepository.class
 iseries/controller/TemporadaController.class

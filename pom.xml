@@ -87,13 +87,6 @@
         </execution>
       </executions>
     </plugin>
-	<plugin>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>2.12.1</version>
-  <configuration>
-    <argLine>-server -ea -XX:MaxPermSize=256m -Xmx4g -XX:-UseSplitVerifier ${argLine}</argLine>
-  </configuration>
-</plugin>
   </plugins>
 	
 		<!--
