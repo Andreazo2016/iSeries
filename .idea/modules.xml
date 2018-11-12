@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/iSeries.iml" filepath="$PROJECT_DIR$/.idea/modules/iSeries.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/iSeries_main.iml" filepath="$PROJECT_DIR$/.idea/modules/iSeries_main.iml" group="iSeries" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iSeries_test.iml" filepath="$PROJECT_DIR$/.idea/modules/iSeries_test.iml" group="iSeries" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iseries-iSeries_main.iml" filepath="$PROJECT_DIR$/.idea/modules/iseries-iSeries_main.iml" group="iSeries" />
     </modules>
   </component>
 </project>
