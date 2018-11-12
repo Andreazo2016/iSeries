@@ -120,7 +120,7 @@ public class SeriesController {
 
 	//Adicionando Comentario
 	@SuppressWarnings("deprecation")
-	@RequestMapping("/adicionarComentario")
+	@RequestMapping("/adicionarComentarios")
 	@ResponseBody
 	public String adicionarComentario(HttpServletRequest request, HttpServletResponse response){
 		
@@ -150,7 +150,7 @@ public class SeriesController {
 	}
 	
 	//Removendo Comentario
-	@GetMapping(value = "deletarComentario")
+	@GetMapping(value = "deletarComentarios")
 	String removerComentario(Comentario comentario, HttpSession session){
 		comentario = this.comentRepo.findOne(comentario.getId());
 		this.comentRepo.delete(comentario);
