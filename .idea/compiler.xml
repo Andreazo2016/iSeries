@@ -11,11 +11,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="iSeries" target="1.6" />
-<<<<<<< HEAD
-=======
-      <module name="iseries-iSeries_main" target="1.5" />
->>>>>>> 6a36969768bf6d36e15f585a8d617723a745a352
-      <module name="iSeries_test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
