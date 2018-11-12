@@ -156,6 +156,8 @@ public class SeriesController {
 		this.comentRepo.delete(comentario);
 		session.setAttribute("idx", comentario.getId_serie());
 		return "redirect:viewSerieII";
+
+
 	}
 
 }
