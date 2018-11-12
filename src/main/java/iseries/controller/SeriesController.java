@@ -65,7 +65,7 @@ public class SeriesController {
 	}
 	
 	// Atualizando Serie
-	@PostMapping(value = "updateSerie")
+	@PostMapping(value = "updateSeries")
 	String updateSerie(SerieDTO seriesDTO, Model model, @RequestParam(value="imagem", required=false) MultipartFile imagem,
 			BindingResult result, RedirectAttributes redirectAttributes) throws IOException{
 		Serie serie = new Serie(seriesDTO);
@@ -94,7 +94,7 @@ public class SeriesController {
 	}
 	
 	// Visualizando Serie
-	@GetMapping(value = "viewSerie")
+	@GetMapping(value = "viewSeries")
 	String viewSerie(HttpSession session, SerieDTO serieDTO, Model model){
 		Serie serie = new Serie(serieDTO);
 		model.addAttribute("serieOne", this.serieRepo.getOne(serie.getId()));
@@ -104,7 +104,7 @@ public class SeriesController {
 	}
 	
 	//Usando p/ Quando add/del Temporada...
-	@GetMapping(value = "viewSerieII")
+	@GetMapping(value = "viewSeriesII")
 	String viewSerieII(HttpSession session, Model model, @RequestParam(value="id", required=false) Integer id){
 		
 		if(session.getAttribute("idx") != null){
