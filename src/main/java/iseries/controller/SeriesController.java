@@ -42,7 +42,7 @@ public class SeriesController {
 	@Autowired private ServletContext servletContext;
 	private static final String RETORN_URL = "/user/visualizar-serie";
 	// Inserindo Serie
-	@PostMapping(value = "cadastraSerie")
+	@PostMapping(value = "cadastrarSeries")
 	String cadastraSerie(SerieDTO seriesDTO, @RequestParam(value="imagem", required=false) MultipartFile imagem,
 						 BindingResult result, Model model, RedirectAttributes redirectAttributes) throws IOException{
 

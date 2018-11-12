@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iSeries.iml" filepath="$PROJECT_DIR$/.idea/modules/iSeries.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/iSeries_main.iml" filepath="$PROJECT_DIR$/.idea/modules/iSeries_main.iml" group="iSeries" />
+      <module fileurl="file://$PROJECT_DIR$/iSeries.iml" filepath="$PROJECT_DIR$/iSeries.iml" />
     </modules>
   </component>
 </project>
