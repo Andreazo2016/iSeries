@@ -23,22 +23,21 @@ public class Serie {
 	@Column(name="ID_SERIE")
 	private Integer id;
 	@NotNull
-	@Size(max = 50, message="O tamanho maximo é de {max}")
 	private String nome;
 	@NotNull
-	@Size(min = 1, max = 15, message="O tamanho deve ser entre {min} e {max}")
+
 	private String diretor;
 	@NotNull
-	@Size(min =1, max = 15, message="O tamanho deve ser entre {min} e {max}")
+
 	private String origem;
 	@NotNull
-	@Size(max = 10, message="O tamanho maximo é de {max}")
+
 	private String genero;
 	@NotNull
-	@Size(min = 1, max = 500, message="O tamanho deve ser entre {min} e {max}")
+
 	private String sinopse;
 	@NotNull
-	@Size(min = 4, max = 4, message="Deve ser apenas o ano exato... Ex: 2017")
+
 	private String ano;
 	
 	@Column(name="PATH")

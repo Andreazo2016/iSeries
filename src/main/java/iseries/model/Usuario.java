@@ -25,14 +25,14 @@ public class Usuario {
 	private Integer id;
 	
 	@NotNull 
-	@Size(max = 25, message="O tamanho deve ser entre {min} e {max}")
+
 	private String login;
 	
 	@NotNull 
 	private String email;
 	
 	@NotNull 
-	@Size(max = 10, message="O tamanho deve ser entre {min} e {max}")
+
 	private String senha;
 	
 	@NotNull 
