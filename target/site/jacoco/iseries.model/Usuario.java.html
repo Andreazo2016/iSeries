@@ -51,7 +51,7 @@ public class Usuario {
 	(mappedBy=&quot;usuario&quot;, targetEntity=Comentario.class, fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	private Collection&lt;Comentario&gt; comentarios;
 	
-<span class="nc" id="L54">	public Usuario() { }</span>
+<span class="fc" id="L54">	public Usuario() { }</span>
 
 <span class="nc" id="L56">	public Usuario(UsuarioDTO usuarioDTO) {</span>
 <span class="nc" id="L57">		setLogin(usuarioDTO.getLogin());</span>
@@ -84,7 +84,7 @@ public class Usuario {
 <span class="nc" id="L84">	}</span>
 
 	public Integer getId() {
-<span class="nc" id="L87">		return id;</span>
+<span class="fc" id="L87">		return id;</span>
 	}
 
 	public void setId(Integer id) {
@@ -92,28 +92,28 @@ public class Usuario {
 <span class="nc" id="L92">	}</span>
 
 	public String getLogin() {
-<span class="nc" id="L95">		return login;</span>
+<span class="fc" id="L95">		return login;</span>
 	}
 
 	public void setLogin(String login) {
-<span class="nc" id="L99">		this.login = login;</span>
-<span class="nc" id="L100">	}</span>
+<span class="fc" id="L99">		this.login = login;</span>
+<span class="fc" id="L100">	}</span>
 
 	public String getEmail() {
-<span class="nc" id="L103">		return email;</span>
+<span class="fc" id="L103">		return email;</span>
 	}
 
 	public void setEmail(String email) {
-<span class="nc" id="L107">		this.email = email;</span>
-<span class="nc" id="L108">	}</span>
+<span class="fc" id="L107">		this.email = email;</span>
+<span class="fc" id="L108">	}</span>
 
 	public String getSenha() {
-<span class="nc" id="L111">		return senha;</span>
+<span class="fc" id="L111">		return senha;</span>
 	}
 
 	public void setSenha(String senha) {
-<span class="nc" id="L115">		this.senha = senha;</span>
-<span class="nc" id="L116">	}</span>
+<span class="fc" id="L115">		this.senha = senha;</span>
+<span class="fc" id="L116">	}</span>
 
 	public boolean isAdmin() {
 <span class="nc" id="L119">		return admin;</span>

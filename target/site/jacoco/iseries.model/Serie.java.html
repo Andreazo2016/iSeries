@@ -23,22 +23,22 @@ public class Serie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name=&quot;ID_SERIE&quot;)
 	private Integer id;
-<span class="nc" id="L26">	@NotNull</span>
+<span class="pc" id="L26">	@NotNull</span>
 	@Size(max = 50, message=&quot;O tamanho maximo é de {max}&quot;)
 	private String nome = &quot;defualt&quot;;
-<span class="nc" id="L29">	@NotNull</span>
+<span class="pc" id="L29">	@NotNull</span>
 	@Size(min = 1, max = 15, message=&quot;O tamanho deve ser entre {min} e {max}&quot;)
 	private String diretor = &quot;defualt&quot;;
-<span class="nc" id="L32">	@NotNull</span>
+<span class="pc" id="L32">	@NotNull</span>
 	@Size(min =1, max = 15, message=&quot;O tamanho deve ser entre {min} e {max}&quot;)
 	private String origem = &quot;defualt&quot;;
-<span class="nc" id="L35">	@NotNull</span>
+<span class="pc" id="L35">	@NotNull</span>
 	@Size(max = 10, message=&quot;O tamanho maximo é de {max}&quot;)
 	private String genero = &quot;defualt&quot;;
-<span class="nc" id="L38">	@NotNull</span>
+<span class="pc" id="L38">	@NotNull</span>
 	@Size(min = 1, max = 500, message=&quot;O tamanho deve ser entre {min} e {max}&quot;)
 	private String sinopse = &quot;defualt&quot;;
-<span class="nc" id="L41">	@NotNull</span>
+<span class="pc" id="L41">	@NotNull</span>
 	@Size(min = 4, max = 4, message=&quot;Deve ser apenas o ano exato... Ex: 2017&quot;)
 	private String ano = &quot;defualt&quot;;
 	
@@ -48,7 +48,7 @@ public class Serie {
 	@ManyToMany(mappedBy=&quot;minhas_series&quot;,  fetch=FetchType.LAZY)
 	private Collection&lt;Usuario&gt; usuarios;
 
-<span class="nc" id="L51">	@OneToMany</span>
+<span class="pc" id="L51">	@OneToMany</span>
 	(mappedBy = &quot;serie&quot;, targetEntity = Temporada.class, fetch = FetchType.LAZY, 
 	cascade = CascadeType.ALL)
 	private List&lt;Temporada&gt; temporadas = new ArrayList&lt;Temporada&gt;();
@@ -58,7 +58,7 @@ public class Serie {
 	cascade=CascadeType.ALL)
 	private Collection&lt;Comentario&gt; comentarios;
 
-<span class="nc" id="L61">	public Serie() {}</span>
+<span class="fc" id="L61">	public Serie() {}</span>
 <span class="nc" id="L62">	public Serie(SerieDTO serieDTO) {}</span>
 
 	public Serie(Integer id) {
@@ -68,17 +68,17 @@ public class Serie {
 
 	public Serie(Integer id, String nome, String diretor, String origem, String genero, String sinopse, String ano,
 			String path, List&lt;Temporada&gt; temporadas) {
-<span class="nc" id="L71">		super();</span>
-<span class="nc" id="L72">		this.id = id;</span>
-<span class="nc" id="L73">		this.nome = nome;</span>
-<span class="nc" id="L74">		this.diretor = diretor;</span>
-<span class="nc" id="L75">		this.origem = origem;</span>
-<span class="nc" id="L76">		this.genero = genero;</span>
-<span class="nc" id="L77">		this.sinopse = sinopse;</span>
-<span class="nc" id="L78">		this.ano = ano;</span>
-<span class="nc" id="L79">		this.path = path;</span>
-<span class="nc" id="L80">		this.temporadas = temporadas;</span>
-<span class="nc" id="L81">	}</span>
+<span class="fc" id="L71">		super();</span>
+<span class="fc" id="L72">		this.id = id;</span>
+<span class="fc" id="L73">		this.nome = nome;</span>
+<span class="fc" id="L74">		this.diretor = diretor;</span>
+<span class="fc" id="L75">		this.origem = origem;</span>
+<span class="fc" id="L76">		this.genero = genero;</span>
+<span class="fc" id="L77">		this.sinopse = sinopse;</span>
+<span class="fc" id="L78">		this.ano = ano;</span>
+<span class="fc" id="L79">		this.path = path;</span>
+<span class="fc" id="L80">		this.temporadas = temporadas;</span>
+<span class="fc" id="L81">	}</span>
 
 	public Collection&lt;Usuario&gt; getUsuarios() {
 <span class="nc" id="L84">		return usuarios;</span>
@@ -89,7 +89,7 @@ public class Serie {
 <span class="nc" id="L89">	}</span>
 
 	public Integer getId() {
-<span class="nc" id="L92">		return id;</span>
+<span class="fc" id="L92">		return id;</span>
 	}
 
 	public void setId(Integer id) {
@@ -97,7 +97,7 @@ public class Serie {
 <span class="nc" id="L97">	}</span>
 
 	public String getNome() {
-<span class="nc" id="L100">		return nome;</span>
+<span class="fc" id="L100">		return nome;</span>
 	}
 
 	public void setNome(String nome) {
@@ -105,7 +105,7 @@ public class Serie {
 <span class="nc" id="L105">	}</span>
 
 	public String getDiretor() {
-<span class="nc" id="L108">		return diretor;</span>
+<span class="fc" id="L108">		return diretor;</span>
 	}
 
 	public void setDiretor(String diretor) {
@@ -121,7 +121,7 @@ public class Serie {
 <span class="nc" id="L121">	}</span>
 
 	public String getGenero() {
-<span class="nc" id="L124">		return genero;</span>
+<span class="fc" id="L124">		return genero;</span>
 	}
 
 	public void setGenero(String genero) {
@@ -153,7 +153,7 @@ public class Serie {
 <span class="nc" id="L153">	}</span>
 
 	public List&lt;Temporada&gt; getTemporadas() {
-<span class="nc" id="L156">		return temporadas;</span>
+<span class="fc" id="L156">		return temporadas;</span>
 	}
 
 	public void setTemporadas(List&lt;Temporada&gt; temporadas) {

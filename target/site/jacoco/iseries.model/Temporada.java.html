@@ -21,10 +21,10 @@ public class Temporada {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-<span class="nc" id="L24">	@NotNull</span>
+<span class="pc" id="L24">	@NotNull</span>
 	private String numero = &quot;default&quot;;
 	
-<span class="nc" id="L27">	@NotNull</span>
+<span class="pc" id="L27">	@NotNull</span>
 	private String duracao  = &quot;default&quot;;
 	
 	@ManyToOne
@@ -35,7 +35,7 @@ public class Temporada {
 	(mappedBy = &quot;temporada&quot;, targetEntity = Episodio.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List&lt;Episodio&gt; episodios;
 	
-<span class="nc" id="L38">	public Temporada() {}</span>
+<span class="fc" id="L38">	public Temporada() {}</span>
 
 	public Temporada(Integer id) {
 <span class="nc" id="L41">		super();</span>
@@ -43,13 +43,13 @@ public class Temporada {
 <span class="nc" id="L43">	}</span>
 
 	public Temporada(Integer id, String numero, String duracao, Serie serie, List&lt;Episodio&gt; episodios) {
-<span class="nc" id="L46">		super();</span>
-<span class="nc" id="L47">		this.id = id;</span>
-<span class="nc" id="L48">		this.numero = numero;</span>
-<span class="nc" id="L49">		this.duracao = duracao;</span>
-<span class="nc" id="L50">		this.serie = serie;</span>
-<span class="nc" id="L51">		this.episodios = episodios;</span>
-<span class="nc" id="L52">	}</span>
+<span class="fc" id="L46">		super();</span>
+<span class="fc" id="L47">		this.id = id;</span>
+<span class="fc" id="L48">		this.numero = numero;</span>
+<span class="fc" id="L49">		this.duracao = duracao;</span>
+<span class="fc" id="L50">		this.serie = serie;</span>
+<span class="fc" id="L51">		this.episodios = episodios;</span>
+<span class="fc" id="L52">	}</span>
 
 	public Integer getId() {
 <span class="nc" id="L55">		return id;</span>
@@ -80,11 +80,11 @@ public class Temporada {
 	}
 
 	public void setSerie(Serie serie) {
-<span class="nc" id="L83">		this.serie = serie;</span>
-<span class="nc" id="L84">	}</span>
+<span class="fc" id="L83">		this.serie = serie;</span>
+<span class="fc" id="L84">	}</span>
 
 	public List&lt;Episodio&gt; getEpisodios() {
-<span class="nc" id="L87">		return episodios;</span>
+<span class="fc" id="L87">		return episodios;</span>
 	}
 
 	public void setEpisodios(List&lt;Episodio&gt; episodios) {

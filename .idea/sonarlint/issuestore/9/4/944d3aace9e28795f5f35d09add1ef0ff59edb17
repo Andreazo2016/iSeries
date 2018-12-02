@@ -1,5 +1,0 @@
-
-nsquid:S00117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ª¹¯üÿÿÿÿ
-Vsquid:S1854M"8Remove this useless assignment to local variable "user".(ÊúÛ÷8Ë ‘é,
-csquid:UselessImportCheck	"3Remove this unused import 'javax.validation.Valid'.(æ¤ñ÷úÿÿÿÿ8öêá—é,
-ksquid:S1192K"HDefine a constant instead of duplicating this literal "usuario" 4 times.(í¡¥õúÿÿÿÿ8ü§¶˜é,

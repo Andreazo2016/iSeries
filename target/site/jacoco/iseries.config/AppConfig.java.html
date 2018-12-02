@@ -8,13 +8,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import iseries.interceptor.MyInterceptor;
 
 @Configuration
-<span class="nc" id="L11">public class AppConfig extends WebMvcConfigurerAdapter {</span>
+<span class="fc" id="L11">public class AppConfig extends WebMvcConfigurerAdapter {</span>
 
 	@Autowired
 	private MyInterceptor myInterceptor;
 	@Override
 	public void addInterceptors(InterceptorRegistry registry){
-<span class="nc" id="L17">		registry.addInterceptor(myInterceptor);</span>
-<span class="nc" id="L18">	}</span>
+<span class="fc" id="L17">		registry.addInterceptor(myInterceptor);</span>
+<span class="fc" id="L18">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
